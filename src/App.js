@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { useForm } from './components/useForm'
 import Card from './components/card'
+import colors from './data/colors'
+import ColorCard from './components/colorCard'
 
 function App() {
 
   const [values, handleChange] = useForm({firstName: '', lastName: '', email: '', phone: '', businessName: ''})
+  const [backgroundColor, setBackgroundColor] = useState('white')
   
 
   return (
@@ -28,7 +31,15 @@ function App() {
       <input value={values["phone"]} onChange={handleChange} name="phone" />
       <br />
       <br />
-      <Card fullName={values.fullName} email={values.email} phone={values.phone} businessName={values.businessName}/>
+      <Card fullName={values.fullName} email={values.email} phone={values.phone} businessName={values.businessName} backgroundColor={backgroundColor}/>
+      <br />
+      <label>Card Background Color</label> 
+      <br />   
+      <div id="color-grid"> 
+        {colors().map(element => {
+          return <ColorCard colorName={element.name} handleClick={setBackgroundColor} />
+        })}
+      </div>
     </div>
   );
 }

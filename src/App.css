@@ -51,3 +51,15 @@
 #phone{
   grid-column: 2/3;
 }
+
+#color-grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.colorCard:hover{
+  opacity: 60%;
+}

@@ -1,13 +1,13 @@
 import {useState} from 'react'
 
-export const useForm = (params) => {
+export const useColor = (params) => {
     const [values, setValues] = useState(params)
 
     return [
-        values, ev => {
+        values => {
           setValues({
             ...values,
-            [ev.target.name]: ev.target.value
+            backgroundColor: params
           });
         }
       ]
