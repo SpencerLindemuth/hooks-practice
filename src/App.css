@@ -20,3 +20,10 @@
 .App-link {
   color: #09d3ac;
 }
+
+#business-card{
+  width: 40vw;
+  min-height: 20vh;
+  margin-left: 30vw;
+  border: solid black;
+}
