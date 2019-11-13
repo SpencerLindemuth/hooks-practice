@@ -4,11 +4,11 @@ const Card = (props) => {
     return(
         <div id="business-card">
             <h2>{props.businessName}</h2>
-            <span id="firstName">{props.firstName}</span>
-            &nbsp;
-            <span id="lastName">{props.lastName}</span>
-            <p>{props.email}</p>
-            <p>{props.phone}</p>
+            <span id="fullName">{props.fullName}</span>
+            <div id="contact">
+                <span id="email">{props.email}</span>
+                <span id="phone">{props.phone}</span>
+            </div>
         </div>
     )
 }

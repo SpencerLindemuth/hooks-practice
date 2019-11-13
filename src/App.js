@@ -11,18 +11,24 @@ function App() {
   return (
     <div className="App">
       <p>Let's make you a business card!</p>
-      <input value={values["firstName"]} onChange={handleChange} name="firstName" />
-      <br />
-      <input value={values["lastName"]} onChange={handleChange} name="lastName" />
-      <br />
-      <input value={values["email"]} onChange={handleChange} name="email" />
-      <br />
-      <input value={values["phone"]} onChange={handleChange} name="phone" />
+      <label >Business Name</label>
       <br />
       <input value={values["businessName"]} onChange={handleChange} name="businessName" />
       <br />
+      <label >Full Name</label>
       <br />
-      <Card firstName={values.firstName} lastName={values.lastName} email={values.email} phone={values.phone} businessName={values.businessName}/>
+      <input value={values["fullName"]} onChange={handleChange} name="fullName" />
+      <br />
+      <label >Email</label>
+      <br />
+      <input value={values["email"]} onChange={handleChange} name="email" />
+      <br />
+      <label >Phone Number</label>
+      <br />
+      <input value={values["phone"]} onChange={handleChange} name="phone" />
+      <br />
+      <br />
+      <Card fullName={values.fullName} email={values.email} phone={values.phone} businessName={values.businessName}/>
     </div>
   );
 }

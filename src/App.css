@@ -22,8 +22,32 @@
 }
 
 #business-card{
+  display: grid;
+  grid-template-columns: 1;
   width: 40vw;
-  min-height: 20vh;
-  margin-left: 30vw;
   border: solid black;
+  border-radius: 2px;
+  min-height: 20vh;
+  margin-left: 30%;
+  margin-right: 30%;
+  grid-template-rows: 40% 30% 30%;
+}
+
+#fullName{
+  margin-top: 1%;
+}
+
+#contact{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1;
+  width: 100%;
+}
+
+#email{
+  grid-column: 0/1;
+}
+
+#phone{
+  grid-column: 2/3;
 }
